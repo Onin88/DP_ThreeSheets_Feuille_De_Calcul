@@ -1,4 +1,4 @@
-# ThreeSheets
+# ThreeSheets - Feuille de Calcul en ligne
 
 ### GROUPE
 - GEHIN Sandy
