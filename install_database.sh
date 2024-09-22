@@ -1,0 +1,1 @@
+python3 DB/install_db.py

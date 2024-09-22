@@ -1,0 +1,269 @@
+/* Styles pour la feuille de calcul */
+
+html,
+body {
+    height: fit-content;
+}
+
+/* CSS pour ajuster la taille du color picker */
+#colorPicker {
+    width: 20px;
+    height: 17px;
+}
+
+/* Style pour le logo */
+.img-logo {
+    width: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+/* Style pour l'en tete au dessus de la barre d'outils */
+.en-tete {
+    padding-top: 5px;
+    margin-bottom: 5px;
+    background-color: #ffffff;
+    height: fit-content;
+}
+
+.toolbar {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    background-color: #ffffff;
+    height: fit-content;
+}
+
+.sticky-header {
+    position: fixed;
+    width: 100%;
+    height: fit-content;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #ffffff; /* Couleur de fond de l'en-tête */
+}
+
+/* Style pour la sélection de cellule */
+.selected-cell {
+    outline: 2px solid lightblue;
+}
+
+/* Bordure pour la sélection */
+td[contenteditable="true"]:focus {
+    outline: 2px solid #add8e6; 
+}
+
+/* Pour verrouiller la colonne des chiffres verticalement */
+th:first-child {
+    position: sticky;
+    top: 0px;
+    left: 0;
+    z-index: 1; /* Pour empêcher la superposition avec le reste du tableau */
+    background-color: #ffffff; /* Ajoutez la couleur de fond souhaitée */
+}
+
+/* Pour verrouiller la ligne des lettres horizontalement */
+thead {
+    position: sticky;
+    top: 140px;
+    z-index: 2; /* Pour empêcher la superposition avec le reste du tableau */
+    background-color: #ffffff; /* Ajoutez la couleur de fond souhaitée */
+}
+
+tbody {
+    position: relative;
+    top: 140px;
+    z-index: 1;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Style pour le bouton partager */
+.btn-partager {
+    height: 40px;
+    margin-top: 5px;
+    margin-right: 10px;
+    width: fit-content;
+    border-radius: 100px;
+    border: none;
+    transition: transform 0.2s ease;
+}
+
+/* Transition au survol */
+.btn-partager:hover {
+    transform: scale(1.1);
+}
+
+/* Style pour le modal liste des utilisateurs */
+#myModal {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Style pour la ligne d'un utilisateur */
+.user-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid #ccc; /* Bordure entre chaque utilisateur */
+}
+
+/* Style pour la colonne d'un utilisateur */
+.user-column {
+    padding: 0 8px;
+    /* Ajoutez d'autres styles selon vos besoins */
+}
+
+/* Style pour le bouton de partage à un utilisateur */
+.btn-partager {
+    margin-left: auto;
+}
+
+
+
+/* Style pour l'affichage des personnes connectées */
+.btn-account {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+    border-radius: 100px;
+    background-color: #007bff;
+    border: none;
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+/* Transition au survol */
+.btn-account:hover {
+    transform: scale(1.1);
+}
+
+.utilisateurs {
+    background-color: #f8f9fa; 
+    padding: 5px; 
+    border-radius: 100px;
+}
+
+/* Style pour le nom du fichier et le outon edit */
+.navbar-text {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Style pour le nom du fichier */
+.edit-button {
+    margin-top: 1px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Transition au survol */
+.edit-button:hover {
+    transform: scale(1.2);
+}
+
+/* COnteneur pour les utilisateurs */
+.utilisateurs {
+    display: flex;
+}
+
+/* COnteneur pour le bouton + popover utilisateur */
+.user-container {
+    position: relative;
+    align-items: center;
+}
+
+/* Icone compte */
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Style pour le contenu popover */
+.popover-content {
+    min-width: 150px;
+    margin-top: 10px;
+    right: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e9eef6;
+    border: #a7c4f3 1px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+.popover-content p {
+    text-align: center;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #007bff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* On met le toast au premier plan */
+.toast {
+    z-index: 9999;
+}
+
+
+
+/* Style pour le pop up en attente du serveur */
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

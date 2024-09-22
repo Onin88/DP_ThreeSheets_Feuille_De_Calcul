@@ -1,0 +1,55 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../img/accueil.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.titre {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.titre:link, .titre:hover, .titre:visited, .titre:active{
+    text-decoration: none;
+    color: #000;
+}
+
+.texte_intro {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5em 0;
+}
+
+.connexion {
+    text-align: center;
+    padding: 0.5rem;
+    background-color:coral;
+    border-radius: 5px;
+    border: 1px solid coral;
+}
+
+
+#inscription:hover, .connexion:hover{
+    transform: scale(1.1);
+}
+
+.inscription {
+    text-align: center;
+    padding: 0.5rem;
+    background-color:cornflowerblue;
+    border-radius: 5px;
+    border: 1px solid cornflowerblue;
+}
+
+.connexion:link, .connexion:visited, .connexion:active, .inscription:link, .inscription:visited, .inscription:active{
+    text-decoration: none;
+    color: #000;
+}

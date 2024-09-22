@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>ThreeSheets - Inscription</title>
+        <link rel="stylesheet" type="text/css" href="/css/connexionOrInscription.css">
+        <link rel="icon" type="image/png" href="/img/icon.png" />
+    </head>
+    <body>
+        <a class="titre" href="index"><h1>ThreeSheets</h1></a>
+        <div class="connexion_form">
+            <form action="/submit_inscription" method="post">
+                <label for="pseudo" id="pseudoLabel"  >Pseudo</label><br>
+                <input type="text" name="pseudo" id="pseudo" placeholder="Pseudo" required><br>
+                <label for="email" id="emailLabel"  >Email</label><br>
+                <input type="email" name="email" id="email" placeholder="Email" required><br>
+                <label for="password">Mot de passe</label><br>
+                <input type="password" name="password" id="password" placeholder="Mot de passe" required><br>
+                <input type="submit" value="S'inscrire">
+            </form>
+            <p id="erreur"></p>
+            <a class="notyet" href="/connexion">Déjà inscrit ?</a>
+        </div>
+    </body>

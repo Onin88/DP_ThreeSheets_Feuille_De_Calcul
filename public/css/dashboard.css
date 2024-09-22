@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.titre {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.titre:link, .titre:hover, .titre:visited, .titre:active{
+    text-decoration: none;
+    color: #000;
+}
+
+.disconnect {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    transition: transform 0.2s ease;
+}
+
+.disconnect:hover {
+    transform: scale(1.1);
+}
+
+/* Style pour l'affichage des fichiers' */
+.fichiers {
+    padding-bottom: 20px;
+}
+
+/* Style pour les bontons fichier */
+.btn-new {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer; /* Curseur au survol */
+    transition: transform 0.2s ease;
+    position: relative;
+}
+
+/* Transition au survol */
+.btn-new:hover {
+    transform: scale(1.1);
+}
+
+/* Largeur de l'image Fichier */
+.btn-icon {
+    width: 120px;
+}
+
+/* Style pour le texte du bouton */
+.btn-text {
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold;
+    color: black; /* Couleur du texte */
+    max-width: 122px; /* Largeur maximale */
+}
+
+/* Style pour le bouton de suppression */
+.delete-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: -10px; /* Ajustez selon votre mise en page */
+    margin-right: -10px; /* Ajustez selon votre mise en page */
+    color: red; /* Couleur de la croix */
+    cursor: pointer; /* Curseur de la souris */
+    font-size: 20px; /* Taille de la croix */
+    transition: transform 0.2s ease;
+}
+
+/* Transition au survol */
+.delete-icon:hover {
+    transform: scale(1.5);
+}

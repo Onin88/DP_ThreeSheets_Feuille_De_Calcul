@@ -1,0 +1,62 @@
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.titre {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.titre:link, .titre:hover, .titre:visited, .titre:active{
+    text-decoration: none;
+    color: #000;
+}
+
+.connexion_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh;
+}
+
+.connexion_form label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.connexion_form input {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    width: 200px;
+    margin-top: 10px;
+}
+
+.connexion_form input:focus {
+    border: 1px solid #000;
+}
+
+.connexion_form input[type="submit"] {
+    background-color: coral;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    cursor: pointer;
+}
+
+.notyet:link, .notyet:hover, .notyet:visited, .notyet:active{
+    text-decoration: none;
+    color: #000;
+}
+
+#erreur {
+    color: red;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

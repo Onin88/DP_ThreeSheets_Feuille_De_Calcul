@@ -1,0 +1,29 @@
+BEGIN;
+
+PRAGMA foreign_keys=ON;
+
+DROP TABLE IF EXISTS COMPTE;
+
+
+CREATE TABLE IF NOT EXISTS COMPTE(
+	idCompte INTEGER PRIMARY KEY AUTOINCREMENT,
+	pseudo TEXT UNIQUE NOT NULL,
+	email TEXT UNIQUE NOT NULL,
+	mdp TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS DOCUMENT(
+	idDocument INTEGER PRIMARY KEY AUTOINCREMENT,
+	titre TEXT NOT NULL,
+	idCreateur INTEGER,
+	FOREIGN KEY(idCreateur) REFERENCES COMPTE(idCompte)
+);
+
+--Table de partage de documents entre plusieurs comptes
+CREATE TABLE IF NOT EXISTS PARTAGE(
+	idPartage INTEGER PRIMARY KEY AUTOINCREMENT,
+	idDocument INTEGER,
+	idCompte INTEGER, --Compte qui a accès au document
+	FOREIGN KEY(idDocument) REFERENCES DOCUMENT(idDocument),
+	FOREIGN KEY(idCompte) REFERENCES COMPTE(idCompte)
+);
